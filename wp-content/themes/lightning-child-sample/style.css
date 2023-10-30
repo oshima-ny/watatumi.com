@@ -1,0 +1,331 @@
+/*
+Theme Name: Lightning Child
+Template: lightning
+*/
+
+/*----------general-style----------*/
+body {
+	font-family: 'Roboto','Zen Kaku Gothic New' !important;
+}
+
+a:hover{
+	color: #ee0010;
+	transition: all 0.2s;
+}
+
+.site-footer-copyright p:nth-child(2) {
+	display: none;
+}
+
+
+.wp-block-details summary{
+	position:relative;
+	display:block;
+	border-left:10px solid #3c3c3c;
+	background-color:#f5f5f5;
+	color:#3c3c3c;
+	font-weight:700;
+	padding:16px;
+}
+.wp-block-details summary::after{
+	content:'=';
+	position:absolute;
+	right:0;
+	top:0;
+	font-size:24px;
+	padding:12px;
+}
+.wp-block-details[open] summary{
+	border-color:#ee0010;
+	color:#ee0010;
+}
+.wp-block-details[open] summary::after{
+	content:'×';
+}
+
+.btn-reading a{
+	transition:all 0.5s;
+}
+.btn-reading a:hover{
+	padding:0.6em 5rem !important;
+	transition:all 0.5s;
+}
+
+/*----------top-gallery----------*/
+.top-gallery-wrapper{
+	padding: 0 25px;
+	display:grid;
+	grid-template-columns:20% 40% 20% 20%;
+	grid-template-rows:80vh 20vh 20vh;
+}
+
+.top-gallery-wrapper .wp-block-image img{
+	object-fit: cover !important;
+	height:100% !important;
+}
+
+.top-gallery-1{
+	padding:0.5rem;
+	grid-column: 1/3;
+}
+
+.top-gallery-2{
+	padding:0.5rem;
+	grid-column: 3/5;
+}
+.top-gallery-3{
+	padding:0.5rem;
+	grid-row:2 /4;
+}
+.top-gallery-4{
+	padding:0.5rem;
+	grid-row:2 /3;
+}
+.top-gallery-5{
+	padding:0.5rem;
+	grid-row:3 /4;
+}
+.top-gallery-6{
+	padding:0.5rem;
+	grid-column: 3/4;
+	grid-row: 2/4;
+}
+.top-gallery-7{
+	padding:0.5rem;
+	grid-column: 4/5;
+	grid-row: 2/4;
+}
+
+/*----------top-gallery-responsive----------*/
+@media (max-width: 576px) {
+	.top-gallery-wrapper{
+		padding:0;
+		grid-template-columns:30% 20% 25% 25%;
+		grid-template-rows:50vh 30vw 30vw 25vw 25vw;
+	}
+
+	.top-gallery-wrapper img{
+		height:100%;
+	}
+	.top-gallery-1{
+		grid-column: 1/5;
+	}
+	.top-gallery-2{
+		grid-column:1/2;
+		grid-row:2/3;
+	}
+	.top-gallery-3{
+		grid-column: 1/2;
+		grid-row:3/4;
+	}
+	.top-gallery-4{
+		grid-column:1/4;
+		grid-row:auto;
+	}
+	.top-gallery-5{
+		grid-column:1/4;
+		grid-row:auto;
+	}
+	.top-gallery-6{
+		grid-column:2/5;
+		grid-row:2/4;
+	}
+	.top-gallery-7{
+		grid-column:4/5;
+		grid-row:4/6;
+	}
+}
+
+/*----------top-feature----------*/
+.top-feature{
+	display:flex;
+	align-items:flex-end;
+}
+.top-feature-img{
+	position:relative;
+}
+.top-feature-img::after{
+	white-space: pre;
+	content:'ECサイトから\A海運業界のプラットフォームへ';
+	position:absolute;
+	top:4%;
+	left:80%;
+	background-color:#ee0010;
+	color:#fff;
+	font-size:32px;
+	font-weight:700;
+	padding:32px;
+	width:calc(100% + 100vw);
+}
+.top-feature-text{
+	padding:4%;
+}
+.top-feature-text h4{
+	border-left:10px solid #ee0010;
+	padding-left:4%;
+}
+@media (max-width: 1192px){
+	.top-feature{
+		flex-direction:column;
+	}
+	.top-feature-img{
+		margin-bottom:72px;
+	}
+	.top-feature-img::after{
+		font-size:1.5rem;
+		top:auto;
+		bottom:-48px;
+		left:10%;
+		padding:18px;
+	}
+}
+
+/*----------header-sub-menu----------*/
+.header-sub-menu{
+	display: flex;
+	float: right;
+	list-style: none;
+}
+
+.header-sub-menu li a{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 10px;
+	padding: 0 12px;
+	text-decoration: none;
+}
+
+.sign-in-btn.on-click a{
+	color: #ee0010;
+}
+
+.header-sub-menu li a i{
+	font-size: 24px;
+	margin: 0;
+}
+
+@media (max-width: 992px) {
+	.site-header-logo{
+		float: left;
+	}
+	.header-sub-menu{
+		vertical-align: middle;
+		margin: 0.5em 0;
+	}
+	.vk-mobile-nav-menu-btn{
+		display: none;
+	}
+}
+
+/*----------global-nav animation----------*/
+.global-nav ul li{
+	position: relative;
+}
+
+.global-nav ul li:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-bottom: 1px solid #ee0010;
+	width: 0%;
+	transition: all 0.2s;
+}
+.global-nav ul li:hover:after{
+	width: 100%;
+}
+
+.global-nav ul li a:hover{
+	color: #ee0010;
+	transition: all 0.2s;
+}
+
+/*----------drop-down-menu-sign-in----------*/
+.drop-sign-in{
+	visibility: hidden;
+	opacity: 0;
+	border-top: 1px solid #ee0010;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 4%;
+	background-color: #fff;
+	transition: all 0.2s;
+}
+
+.drop-sign-in.show{
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.2s;
+}
+
+.drop-sign-in h3{
+	position: relative;
+}
+
+.drop-sign-in h3::before{
+	content: "ワタツミへサインイン";
+	position: absolute;
+	right: 0;
+	font-size: 16px;
+	color: #c3c3c3;
+}
+
+.sign_in_btn_container div{
+	background-color: #f5f5f5;
+	margin: 0 2% 24px;
+	padding: 2%;
+	display: grid;
+	grid-template: auto 1fr / 1fr 5fr;
+	grid-gap: 4%;
+}
+
+.sign_in_btn_container div p:nth-child(3){
+	grid-column: 1/3;
+	margin: 0;
+}
+
+/*----------topics----------*/
+
+.entry-header{
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 0;
+}
+.entry-meta{
+	color: #ee0010;
+	font-size: 24px;
+	font-weight: 700;
+}
+.entry-meta-item i{
+	display: none;
+}
+
+.custom-entry-meta-data-list{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+
+.entry-meta-data-list dt{
+	display: none;
+}
+.entry-meta-data-list .tagcloud a{
+	background-color: #f5f5f5;
+	border-radius: 9999px;
+	padding: 8px 16px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.entry-meta-data-list .tagcloud a:hover{
+	background-color: #ee0010;
+	color: #fff;
+}
+
+.entry-meta-data-list .tagcloud a:before{
+	content: '#';
+}
+
