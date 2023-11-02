@@ -38,7 +38,7 @@ add_filter( 'lightning_is_page_header', function( $return ){
     return false;
 } );
 
-/*----------サイトヘッダーに追加----------*/
+/*----------サイトヘッダーにメニューを追加----------*/
 function my_lightning_site_header_logo_after() {
 	wp_nav_menu(array(
         'menu'       => 'header-sub-menu',

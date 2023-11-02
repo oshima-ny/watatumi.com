@@ -1,4 +1,4 @@
-/*----------drop-down-menu (sign in)----------*/
+/*----------drop-down-menu (sign in)----------
 const signInBtn = document.querySelector('.sign-in-btn');
 const dropSignIn = document.querySelector('.drop-sign-in');
 function toggleDropSignIn() {
@@ -6,6 +6,8 @@ function toggleDropSignIn() {
     dropSignIn.classList.toggle('show');
 }
 signInBtn.addEventListener('click', toggleDropSignIn);
+
+*/
 
 /*----------add font----------*/
 window.WebFontConfig = {
@@ -25,3 +27,20 @@ window.WebFontConfig = {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
 })();
+
+/*----------drop-down-menu (sign in)----------*/
+const signInBtn = document.querySelector('.sign-in-btn');
+const dropSignIn = document.querySelector('.drop-sign-in');
+
+function showDropSignIn() {
+    dropSignIn.classList.add('show');
+}
+
+function hideDropSignIn() {
+    dropSignIn.classList.remove('show');
+}
+
+signInBtn.addEventListener('mouseover', showDropSignIn);
+signInBtn.addEventListener('mouseout', hideDropSignIn);
+dropSignIn.addEventListener('mouseover', showDropSignIn);
+dropSignIn.addEventListener('mouseout', hideDropSignIn);
